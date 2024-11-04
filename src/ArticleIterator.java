@@ -12,15 +12,12 @@ public class ArticleIterator implements Iterator {
 
     @Override
     public boolean hasNext() {
-        if (index < objects.size()) {
-            return true;
-        }
-        return false;
+        return (index < objects.size());
     }
 
     @Override
     public ArticleComponent next() {
-        if (this.hasNext()) {
+        if (hasNext()) {
             return objects.get(index++);
         }
         return null;
